@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Delivery Time Prediction</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+    Food Delivery Time Prediction System
+</header>
+
+<div class="container">
+
+    <div class="card form-card">
+        <h2>Input Parameters</h2>
+
+        <label>Distance (km)</label>
+        <input type="number" id="distance">
+
+        <label>Preparation Time (min)</label>
+        <input type="number" id="prep_time">
+
+        <label>Weather</label>
+        <select id="weather">
+            <option>Sunny</option>
+            <option>Rainy</option>
+            <option>Cloudy</option>
+        </select>
+
+        <label>Traffic Level</label>
+        <select id="traffic">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+        </select>
+
+        <label>Vehicle Type</label>
+        <select id="vehicle">
+            <option>Bike</option>
+            <option>Car</option>
+            <option>Scooter</option>
+        </select>
+
+        <button onclick="predictTime()">Predict</button>
+    </div>
+
+    <div class="card result-card">
+        <h2>Results</h2>
+
+        <div class="prediction-box" id="prediction">
+            Predicted Delivery Time: --
+        </div>
+
+        <div class="metrics">
+            <div class="metric-card">
+                <div class="metric-title">MAE</div>
+                <div class="metric-value">--</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-title">MSE</div>
+                <div class="metric-value">--</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-title">R²</div>
+                <div class="metric-value">--</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
